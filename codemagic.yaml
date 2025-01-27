@@ -12,7 +12,7 @@ workflows:
         script: |
           xcodebuild -project ShakeFlashlight.xcodeproj \
           -scheme ShakeFlashlight \
-          -sdk iphoneos \
+          -sdk iphoneos18.1 \
           -configuration Release \
           clean build
       - name: Export the IPA
