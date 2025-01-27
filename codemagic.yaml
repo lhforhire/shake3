@@ -4,18 +4,13 @@ workflows:
     name: iOS Build Workflow
     environment:
       xcode: latest
-      cocoapods: default
       vars:
         APPLE_ID: "$APPLE_ID"
         APPLE_PASSWORD: "$APPLE_PASSWORD"
     scripts:
-      - name: Install dependencies
-        script: |
-          gem install bundler:2.3.0
-          bundle install
       - name: Build the iOS app
         script: |
-          xcodebuild -workspace ShakeFlashlight.xcworkspace \
+          xcodebuild -project ShakeFlashlight.xcodeproj \
           -scheme ShakeFlashlight \
           -sdk iphoneos \
           -configuration Release \
