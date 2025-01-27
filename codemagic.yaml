@@ -5,15 +5,15 @@ workflows:
       xcode: latest
       vars:
         APPLE_ID: "Larrymaze88@gmail.com"
-        APPLE_PASSWORD: "Shipper8811988!!!" # Password should be stored securely in Codemagic secrets
+        APPLE_PASSWORD: "Shipper8811988!!!"
     scripts:
-      - name: Regenerate and Share Schemes
+      - name: Check and List Available Schemes
         script: |
-          gem install xcodeproj
-          xcodeproj manage_schemes \
-            --project "ShakeFlashlight.xcodeproj" \
-            --output "ShakeFlashlight.xcodeproj" \
-            --shared
+          xcodebuild -list -project ShakeFlashlight.xcodeproj
+          if ! xcodebuild -list -project ShakeFlashlight.xcodeproj | grep -q "ShakeFlashlight"; then
+            echo "Scheme 'ShakeFlashlight' not found. Please ensure the scheme exists and is shared."
+            exit 1
+          fi
       - name: Build the iOS app
         script: |
           xcodebuild -project ShakeFlashlight.xcodeproj \
