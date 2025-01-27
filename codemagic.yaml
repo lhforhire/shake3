@@ -4,9 +4,16 @@ workflows:
     environment:
       xcode: latest
       vars:
-        APPLE_ID: "$APPLE_ID"
-        APPLE_PASSWORD: "$APPLE_PASSWORD"
+        APPLE_ID: "Larrymaze88@gmail.com"
+        APPLE_PASSWORD: "Shipper8811988!!!" # Password should be stored securely in Codemagic secrets
     scripts:
+      - name: Regenerate and Share Schemes
+        script: |
+          gem install xcodeproj
+          xcodeproj manage_schemes \
+            --project "ShakeFlashlight.xcodeproj" \
+            --output "ShakeFlashlight.xcodeproj" \
+            --shared
       - name: Build the iOS app
         script: |
           xcodebuild -project ShakeFlashlight.xcodeproj \
@@ -18,8 +25,8 @@ workflows:
         script: |
           mkdir -p build/ios/ipa
           xcodebuild -exportArchive \
-          -archivePath build/ios/ShakeFlashlight.xcarchive \
-          -exportOptionsPlist exportOptions.plist \
-          -exportPath build/ios/ipa
+            -archivePath build/ios/ShakeFlashlight.xcarchive \
+            -exportOptionsPlist exportOptions.plist \
+            -exportPath build/ios/ipa
     artifacts:
       - build/ios/ipa/*
