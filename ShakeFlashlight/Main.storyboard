@@ -1,0 +1,23 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ViewController">
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="Scene">
+            <objects>
+                <viewController id="ViewController" customClass="ViewController" customModule="ShakeFlashlight" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mainView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Shake Light Active" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" id="label">
+                                <rect key="frame" x="87.5" y="311.5" width="200" height="44"/>
+                                <color key="textColor" name="white" systemColor="whiteColor" catalog="System" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                    </view>
+                </viewController>
+            </objects>
+        </scene>
+    </scenes>
+</document>
