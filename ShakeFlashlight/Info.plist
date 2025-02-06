@@ -23,9 +23,14 @@
     <key>CFBundleVersion</key>
     <string>1</string>
     
+    <!-- ✅ This ensures Main.storyboard is correctly recognized -->
     <key>UILaunchStoryboardName</key>
     <string>Main</string>
-    
+
+    <!-- ✅ Ensures Main.storyboard is used as the Main Interface -->
+    <key>NSMainStoryboardFile</key>
+    <string>Main</string>
+
     <key>NSPrincipalClass</key>
     <string>UIApplication</string>
     
