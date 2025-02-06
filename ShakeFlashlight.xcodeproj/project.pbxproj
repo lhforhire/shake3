@@ -1,4 +1,3 @@
-
 // !$*UTF8*$!
 {
     archiveVersion = 1;
@@ -81,6 +80,7 @@
             isa = PBXProject;
             attributes = {
                 LastUpgradeCheck = 1500;
+                DevelopmentTeam = YOUR_TEAM_ID; /* Add your team ID here */
             };
             buildConfigurationList = 1D6058900D05DD3D006BFB59 /* Build configuration list for PBXProject */;
             compatibilityVersion = "Xcode 15.0";
@@ -146,9 +146,11 @@
                 PRODUCT_BUNDLE_IDENTIFIER = "com.example.shakeflashlight";
                 INFOPLIST_FILE = Info.plist;
                 PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos18.1;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+                SDKROOT = iphoneos18.1;
+                IPHONEOS_DEPLOYMENT_TARGET = 18.1;
                 SWIFT_VERSION = 5.0;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = YOUR_TEAM_ID; /* Add your team ID here */
             };
             name = Debug;
         };
@@ -158,9 +160,11 @@
                 PRODUCT_BUNDLE_IDENTIFIER = "com.example.shakeflashlight";
                 INFOPLIST_FILE = Info.plist;
                 PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos18.1;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+                SDKROOT = iphoneos18.1;
+                IPHONEOS_DEPLOYMENT_TARGET = 18.1;
                 SWIFT_VERSION = 5.0;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = YOUR_TEAM_ID; /* Add your team ID here */
             };
             name = Release;
         };
