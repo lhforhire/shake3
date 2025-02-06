@@ -150,7 +150,8 @@
                 IPHONEOS_DEPLOYMENT_TARGET = 18.1;
                 SWIFT_VERSION = 5.0;
                 CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = YOUR_TEAM_ID; /* Add your team ID here */
+                ALWAYS_SEARCH_USER_PATHS = NO; /* Set to NO */
+                SWIFT_OPTIMIZATION_LEVEL = -Onone; /* Set to -Onone for Debug configuration */
             };
             name = Debug;
         };
@@ -164,7 +165,7 @@
                 IPHONEOS_DEPLOYMENT_TARGET = 18.1;
                 SWIFT_VERSION = 5.0;
                 CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = YOUR_TEAM_ID; /* Add your team ID here */
+                ALWAYS_SEARCH_USER_PATHS = NO; /* Set to NO */
             };
             name = Release;
         };
@@ -174,3 +175,4 @@
 
     rootObject = 1D6058900D05DD3D006BFB54 /* Project object */;
 }
+
